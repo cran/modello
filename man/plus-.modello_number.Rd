@@ -18,7 +18,7 @@ Returns a referecen object of class 'number'
 Add two \code{numbers}.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## Scalar + scalar
 x1 = number(1, scalar=TRUE)
 x2 = number(2, scalar=TRUE)

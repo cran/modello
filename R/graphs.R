@@ -41,7 +41,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' g = graph.open()
         ##' graph.close()
         ##' g$is.linked() # TRUE
@@ -59,7 +59,7 @@
         ##' @return Retursn TRUE if is linked, FALSE otherwise
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' g = graph.open()
         ##' graph.close()
         ##' g$is.linked() # TRUE
@@ -77,7 +77,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x1 = number(1)
         ##' x2 = number(3)
         ##' x3 = number(2)
@@ -115,7 +115,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x1 = number(1)
         ##' x2 = number(3)
         ##' x3 = number(2)

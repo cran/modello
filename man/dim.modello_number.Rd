@@ -16,7 +16,7 @@ Returns the shape vector of the \code{number}
 S3 method to get the shape of a \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 dim(x) # c(3, 3)
 modello.close()

@@ -27,7 +27,7 @@ Considering a Gamma Distribution calculates the log-density.
 \deqn{\alpha * log(\beta) - logGamma(\alpha) + (\alpha - 1) log(y) - \beta * y; y > 0}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rgamma(10, 5, 4))
 ld = ldgamma(y, .k(5), .k(4))

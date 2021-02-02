@@ -18,7 +18,7 @@ Returns a reference object of class 'number'
 Multiplicates two \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## Scalar * scalar
 x1 = number(2, scalar=TRUE)
 x2 = number(2, scalar=TRUE)

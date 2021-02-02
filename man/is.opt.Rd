@@ -16,7 +16,7 @@ Return TRUE/FALSE
 Check if an object is an optimiser.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 mdl = module.lm$new(1, 3, 1)
 optimizer = adam.opt(mdl$pars())
 is.opt(optimizer) # TRUE

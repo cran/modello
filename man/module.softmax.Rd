@@ -8,6 +8,23 @@ R6 class representing a softmax regression model.
 
 R6 class representing a softmax regression model.
 }
+\examples{
+
+## ------------------------------------------------
+## Method `module.softmax$op`
+## ------------------------------------------------
+
+\donttest{
+modello.init(10, 10, 10, 10)
+X = number(matrix(rnorm(12), 6), dx=FALSE)
+mdl = module.softmax$new(1, 2, 3, b=FALSE)
+print(X$v)
+Yh = mdl$op(X)
+print(Yh)
+print(Yh$v)
+modello.close()
+}
+}
 \author{
 Filippo Monari
 }
@@ -44,7 +61,7 @@ the objective function (obj), as well as the name of the module.
 The calculation performed is the following
 ans = softmax(W.op(X) + B)
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{module.softmax$new(tx, nin, nout)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{module.softmax$new(tx, nin, nout, b = TRUE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -56,7 +73,7 @@ ans = softmax(W.op(X) + B)
 
 \item{\code{nout}}{number of outputs}
 
-\item{\code{name}}{name of the layer}
+\item{\code{b}}{if TRUE the intercept term is included}
 }
 \if{html}{\out{</div>}}
 }
@@ -83,6 +100,23 @@ Performs: ans = sigmoid(W.op(X) + B)
 \subsection{Returns}{
 Returns a reference object of class 'number'
 }
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{\donttest{
+modello.init(10, 10, 10, 10)
+X = number(matrix(rnorm(12), 6), dx=FALSE)
+mdl = module.softmax$new(1, 2, 3, b=FALSE)
+print(X$v)
+Yh = mdl$op(X)
+print(Yh)
+print(Yh$v)
+modello.close()
+}
+}
+\if{html}{\out{</div>}}
+
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

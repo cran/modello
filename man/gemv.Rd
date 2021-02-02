@@ -28,7 +28,7 @@ ans = alpha * op(A).B + beta * C
 where alpha and beta are scalars, A is a matrix, and B and C are vectors.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 alpha = number(1, scalar=TRUE)
 beta = number(1, scalar=TRUE)
 A = number(matrix(rnorm(9), 3, 3))

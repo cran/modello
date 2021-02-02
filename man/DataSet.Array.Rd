@@ -44,7 +44,7 @@ ds$..get.data..()
 ## Method `DataSet.Array$feed`
 ## ------------------------------------------------
 
-modello.init()
+modello.init(100, 100, 100, 100)
 X = matrix(rnorm(100), 20)
 ds = DataSet.Array$new(X, 1:20, 1, 1)
 x = number(rnorm(5))
@@ -210,7 +210,7 @@ Method to feed the bathces of data to 'numbers'.
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
-\preformatted{modello.init()
+\preformatted{modello.init(100, 100, 100, 100)
 X = matrix(rnorm(100), 20)
 ds = DataSet.Array$new(X, 1:20, 1, 1)
 x = number(rnorm(5))

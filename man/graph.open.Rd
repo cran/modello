@@ -20,7 +20,7 @@ If \code{g} is NULL a new \code{graph} is open. Otrewise
 the \code{graph} liked to \code{g} is open.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)

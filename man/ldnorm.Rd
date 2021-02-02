@@ -27,7 +27,7 @@ Considering a Normal Distribution calculates the log-density
 \deqn{ld = -log(\sigma) - 0.5 * log(2 * \pi) - 0.5 * ((y - \mu) / \sigma)^2}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rnorm(10))
 ld = ldnorm(y, .k(0), .k(1))

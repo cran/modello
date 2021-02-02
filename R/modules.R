@@ -125,7 +125,7 @@ module.lm = R6Class(
         ##' @return Returns a reference object of class 'number'
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' X = number(as.matrix(rnorm(10)), dx=FALSE)
         ##' mdl = module.lm$new(1, 1, 1, b=FALSE)
         ##' print(X$v)
@@ -150,7 +150,7 @@ module.lm = R6Class(
         ##' @return Returns a reference object of class 'number'
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' X = number(as.matrix(rnorm(10)), dx=FALSE)
         ##' y = number(as.matrix(rnorm(10)), dx=FALSE)
         ##' mdl = module.lm$new(1, 1, 1, b=FALSE)
@@ -173,7 +173,7 @@ module.lm = R6Class(
         ##' @return Returns a flat list with the parametrs of the module
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' mdl = module.lm$new(1, 1, 1, b=FALSE)
         ##' print(mdl$pars())
         ##' print(lapply(mdl$pars(), function(x)x$v))
@@ -209,16 +209,27 @@ module.logistic = R6Class(
         ##'
         ##' @param tx if TRUE it traspose the input matrix
         ##' @param nin number of column of the input matrix
-        ##' @param name name of the layer
+        ##' @param b if TRUE the intercept term is included
         ##' @return Returns the total number of parameters
-        initialize = function (tx, nin, name) {
-            super$initialize(tx, nin, 1, bin.entropy)
+        initialize = function (tx, nin, b=TRUE) {
+            super$initialize(tx, nin, 1, bin.entropy, b)
         },
         ##' @description
         ##' Performs: ans = sigmoid(W.op(X) + B)
         ##'
         ##' @param X input matrix, reference object of class 'number'
         ##' @return Returns a reference object of class 'number'
+        ##' @examples
+        ##' \donttest{
+        ##' modello.init(10, 10, 10, 10)
+        ##' X = number(as.matrix(rnorm(10)), dx=FALSE)
+        ##' mdl = module.logistic$new(1, 1, b=FALSE)
+        ##' print(X$v)
+        ##' Yh = mdl$op(X)
+        ##' print(Yh)
+        ##' print(Yh$v)
+        ##' modello.close()
+        ##' }
         op = function (X) {
             private$.y = sigmoid(super$op(X))
             invisible(private$.y)
@@ -248,17 +259,28 @@ module.softmax = R6Class(
         ##' @param tx if TRUE it traspose the input matrix
         ##' @param nin number of column of the input matrix
         ##' @param nout number of outputs
-        ##' @param name name of the layer
+        ##' @param b if TRUE the intercept term is included
         ##' @return Returns the total number of parameters
-        initialize = function (tx, nin, nout) {
+        initialize = function (tx, nin, nout, b=TRUE) {
             stopifnot(nout > 1)
-            super$initialize(tx, nin, nout, cross.entropy)
+            super$initialize(tx, nin, nout, cross.entropy, b)
         },
         ##' @description
         ##' Performs: ans = sigmoid(W.op(X) + B)
         ##'
         ##' @param X input matrix, reference object of class 'number'
         ##' @return Returns a reference object of class 'number'
+        ##' @examples
+        ##' \donttest{
+        ##' modello.init(10, 10, 10, 10)
+        ##' X = number(matrix(rnorm(12), 6), dx=FALSE)
+        ##' mdl = module.softmax$new(1, 2, 3, b=FALSE)
+        ##' print(X$v)
+        ##' Yh = mdl$op(X)
+        ##' print(Yh)
+        ##' print(Yh$v)
+        ##' modello.close()
+        ##' }
         op = function (X) {
             private$.y = softmax(super$op(X))
             invisible(private$.y)

@@ -23,7 +23,7 @@ Calculates the relu fucntion
 \deqn{relu = max(0, x)}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers sclars
 x1 = number(rnorm(1), scalar=TRUE)
 y1 = relu(x1)

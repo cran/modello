@@ -23,7 +23,7 @@ Calculates the sigmoid
 \deqn{sigmoid = 1 / (1 + exp(-x))}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers sclars
 x1 = number(rnorm(1), scalar=TRUE)
 y1 = sigmoid(x1)

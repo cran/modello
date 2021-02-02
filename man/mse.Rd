@@ -25,7 +25,7 @@ Mean Squared Error between target values and predictions
 \deqn{mse = \sum_i^N{(y_i - \hat y_i)^2} / N}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rnorm(10), dx=FALSE)
 yh = number(rnorm(10))

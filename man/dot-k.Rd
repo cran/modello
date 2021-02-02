@@ -16,7 +16,7 @@ Returns a reference object of class 'number'
 Create a constant scalar \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = .k(1)
 print(x)
 print(x$v)

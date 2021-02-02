@@ -16,7 +16,7 @@ Closes the last open \code{graph}
 Only one open \code{graph} at a time is allowed.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)

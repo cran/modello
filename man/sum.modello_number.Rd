@@ -20,7 +20,7 @@ Returns a 'numeric' or reference object of class 'number'
 Sum function
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(rep(1, 20))
 y = sum(x)
 print(y)

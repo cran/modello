@@ -30,7 +30,7 @@ ans = alpha * op(A).modello$apply.math_op(B) + beta * C
 where alpha and beta are scalars and A, B, and C are matrices.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 alpha = number(1, scalar=TRUE)
 beta = number(1, scalar=TRUE)
 A = number(matrix(rnorm(9), 3, 3))

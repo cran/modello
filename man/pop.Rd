@@ -24,13 +24,13 @@ S3 method to pop (remove) \code{numbers} or
 (\code{NUMBERS_} or \code{GRAPHS_}).
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$is.linked() # TRUE
 pop(x)
 x$is.linked() # FALSE
 modello.close()
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 graph.close()
 g$is.linked() # TRUE

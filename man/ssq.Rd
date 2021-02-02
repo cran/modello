@@ -23,7 +23,7 @@ Sum of square function
 \deqn{ssq = \sum_i x_i^2}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 x = number(rnorm(10))
 y = ssq(x)

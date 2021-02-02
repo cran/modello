@@ -20,7 +20,7 @@ in the FORTRAN environment.
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 graph.close()
 g$is.linked() # TRUE
@@ -34,7 +34,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 graph.close()
 g$is.linked() # TRUE
@@ -48,7 +48,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)
@@ -72,7 +72,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)
@@ -178,7 +178,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 graph.close()
 g$is.linked() # TRUE
@@ -208,7 +208,7 @@ Retursn TRUE if is linked, FALSE otherwise
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 graph.close()
 g$is.linked() # TRUE
@@ -238,7 +238,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)
@@ -292,7 +292,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x2 = number(3)
 x3 = number(2)

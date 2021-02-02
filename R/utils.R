@@ -91,30 +91,6 @@ modello.gc <- function (env=.GlobalEnv) {
         }
     }
 }
-## ##' Given its name (charcter id) retrieves
-## ##' a \code{number} (if it exists). 
-## ##'
-## ##' @title Get Number 
-## ##' @param name \code{number} name
-## ##' @return Returns the \code{number} associated
-## ##' with the provided name 
-## ##' @author Filippo Monari
-## ##' @export
-## .nn <- function (name) {
-##     .modello$get.number(name)
-## }
-## ##' Given its name (character id) retrieves
-## ##' a \code{graph} (if it exists).
-## ##'
-## ##' @title Get Graph 
-## ##' @param name \code{graph} name
-## ##' @return Returns the \code{graph} associated
-## ##' with the provided name
-## ##' @author Filippo Monari
-## ##' @export
-## .gg <- function (name) {
-##     .modello$get.graph(name)
-## }
 ##' Checks if a object is of class 'number'
 ##'
 ##' @title Is Number 
@@ -122,7 +98,7 @@ modello.gc <- function (env=.GlobalEnv) {
 ##' @return Returns TRUE/FALSE
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(1)
 ##' is.number(x) # TRUE
 ##' modello.close()
@@ -138,7 +114,7 @@ is.number <- function (x) {
 ##' @return Returns TRUE/FALSE
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' g = graph.open()
 ##' is.graph(g) # TRUE
 ##' modello.close()
@@ -153,7 +129,7 @@ is.graph <- function (g) {
 ##' @return Return TRUE/FALSE
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' mdl = module.lm$new(1, 3, 1)
 ##' optimizer = adam.opt(mdl$pars())
 ##' is.opt(optimizer) # TRUE
@@ -224,7 +200,7 @@ number <- function (x, ...) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = .k(1)
 ##' print(x)
 ##' print(x$v)
@@ -240,7 +216,7 @@ number <- function (x, ...) {
 ##' @return Returns the size of the \code{number}
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(rnorm(3))
 ##' length(x) #3
 ##' modello.close()
@@ -255,7 +231,7 @@ length.modello_number <- function (x) {
 ##' @return Returns the shape vector of the \code{number}
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(matrix(rnorm(9), 3, 3))
 ##' dim(x) # c(3, 3)
 ##' modello.close()
@@ -272,7 +248,7 @@ dim.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'graph' linked to the open \code{graph}
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x1 = number(1)
 ##' x2 = number(3)
 ##' x3 = number(2)
@@ -300,7 +276,7 @@ graph.open <- function (g=NULL) {
 ##' @return Returns invisible NULL
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x1 = number(1)
 ##' x2 = number(3)
 ##' x3 = number(2)
@@ -336,7 +312,7 @@ pop <- function(x) {
 }
 #' @rdname pop
 #' @examples
-#' modello.init()
+#' modello.init(10, 10, 10, 10)
 #' x = number(1)
 #' x$is.linked() # TRUE
 #' pop(x)
@@ -348,7 +324,7 @@ pop.modello_number <- function (x) {
 }
 #' @rdname pop
 #' @examples
-#' modello.init()
+#' modello.init(10, 10, 10, 10)
 #' g = graph.open()
 #' graph.close()
 #' g$is.linked() # TRUE
@@ -368,7 +344,7 @@ pop.graph <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(matrix(rnorm(9), 3, 3))
 ##' print(x$v)
 ##' s1 = x[1, 2]
@@ -399,7 +375,7 @@ pop.graph <- function (x) {
 ##' @param dx if TRUE the slice is taken from the gradient
 ##' @param value value to set
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(matrix(rnorm(9), 3, 3))
 ##' print(x$v)
 ##' x[1,1] = -100
@@ -419,7 +395,7 @@ pop.graph <- function (x) {
 ##' @rdname bind
 ##' @param ... \code{numbers} to bind together
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x1 = number(c(1, 2, 3))
 ##' y1 = bind(x1, x1, k=1)
 ##' print(y1)
@@ -436,7 +412,7 @@ bind.modello_number <- function (..., k) {
 ##' @rdname bind
 ##' @param x list of \code{numbers} to bind together
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x1 = number(c(1, 2, 3))
 ##' y1 = bind(list(x1, x1), k=1)
 ##' print(y1)
@@ -496,7 +472,7 @@ embeddings <- function (xf, xx, n) {
 ##' the parameters to optmise.
 ##' @return a reference object of class 'sgd.opt'
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' mdl = module.lm$new(1, 3, 1)
 ##' optimizer = sgd.opt(mdl$pars())
 ##' is.opt(optimizer) # TRUE
@@ -512,7 +488,7 @@ sgd.opt <- function (pars) {
 ##' the parameters to optmise.
 ##' @return a reference object of class 'sgdwm.opt'
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' mdl = module.lm$new(1, 3, 1)
 ##' optimizer = sgdwm.opt(mdl$pars())
 ##' is.opt(optimizer) # TRUE
@@ -528,7 +504,7 @@ sgdwm.opt <- function (pars) {
 ##' the parameters to optmise.
 ##' @return a reference object of class 'adam.opt'
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' mdl = module.lm$new(1, 3, 1)
 ##' optimizer = adam.opt(mdl$pars())
 ##' is.opt(optimizer) # TRUE

@@ -25,7 +25,7 @@ calculates the log-density
 \deqn{ld = log(0.5) + log(\lambda) - \lambda * |y - \mu|}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 y = number(rnorm(10))
 ld = ldlaplace(y, .k(0), .k(1))
 print(ld)

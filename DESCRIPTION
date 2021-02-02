@@ -1,7 +1,7 @@
 Package: modello
 Title: Homemade Deep Learning Library
-Version: 0.1
-Date: 2021-01-1<c2><a1>27 20:00:00
+Version: 0.1.1
+Date: 2021-02-01 19:00:00
 Authors@R: c(person("Filippo", "Monari", role = c("aut", "cre"), email = "ingfimo@gmail.com"))
 Author: Filippo Monari [aut, cre]
 Maintainer: Filippo Monari <ingfimo@gmail.com>
@@ -18,7 +18,7 @@ Collate: 'modello.R' 'interfaces.R' 'session.R' 'numbers.R'
 License: GPL-2
 OS_type: unix
 NeedsCompilation: yes
-Packaged: 2021-01-27 19:18:39 UTC; filippo
+Packaged: 2021-02-01 18:10:07 UTC; filippo
 RoxygenNote: 7.1.0
 Repository: CRAN
-Date/Publication: 2021-02-01 09:00:03 UTC
+Date/Publication: 2021-02-02 01:10:06 UTC

@@ -42,7 +42,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##' x$is.linked() # TRUE
         ##' x$pop()
@@ -60,7 +60,7 @@
         ##' @return Retursn TRUE if is linked, FALSE otherwise
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##' x$is.linked() # TRUE
         ##' x$pop()
@@ -76,7 +76,7 @@
         ##' @return Returns the rank of the \code{number}
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(rnorm(9), 3, 3))
         ##' x$rank() # 2
         ##' modello.close()
@@ -90,7 +90,7 @@
         ##' @return TRUE/FALSE
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x1 = number(1)
         ##' x1$has.dx() # TRUE
         ##' x2 = number(1, dx=FALSE)
@@ -130,7 +130,7 @@
         ##' @author Filippo Monari
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(c(1, 2, 3))
         ##' x$length() # 3
         ##' modello.close()
@@ -144,7 +144,7 @@
         ##' @return Returns the \code{number} shape
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(rnorm(9, 3, 3)))
         ##' x$dim() # c(3, 3)
         ##' modello.close()
@@ -158,7 +158,7 @@
         ##' @param x \code{number} value
         ##' @return Returns invisible self
         ##' @examples
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##  x$get.v()
         ##' x$set.v(2)
@@ -174,7 +174,7 @@
         ##' @return Returns the \code{number} value
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##  x$get.v()
         ##' x$set.v(2)
@@ -191,7 +191,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##  x$get.dv()
         ##' x$set.dv(1)
@@ -211,7 +211,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(0, 3, 3))
         ##' print(x$v)
         ##' print(x$dv)
@@ -240,7 +240,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(0, 3, 3))
         ##' print(x$v)
         ##' print(x$dv)
@@ -264,7 +264,7 @@
         ##' @return Returns the \code{number} value
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(1)
         ##  x$get.dv()
         ##' x$set.dv(1)
@@ -287,7 +287,7 @@
         ##' @return Returns a reference object of class 'number' with the slice
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(rnorm(9), 3, 3))
         ##' print(x$v)
         ##' y = x$slice(1:2, 1:3)
@@ -306,7 +306,7 @@
         ##' @return Returns a reference object of class 'number' with the flat slice
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(rnorm(9), 3, 3))
         ##' print(x$v)
         ##' y = x$flat_slice(1:6)
@@ -327,7 +327,7 @@
         ##' @return Returns a reference object of class 'number' with the contiguous slice
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(matrix(rnorm(9), 3, 3))
         ##' print(x$v)
         ##' y = x$slice(1, 2)
@@ -347,7 +347,7 @@
         ##' @return Returns a reference object of class 'number' with the reshape
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(c(1, 2, 3, 4, 5, 6))
         ##' y = x$reshape(c(3, 2))
         ##' print(x)
@@ -366,7 +366,7 @@
         ##' @param name output \code{number} name
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(as.matrix(c(1, 2, 3)))
         ##' print(x)
         ##' print(x$v)
@@ -387,7 +387,7 @@
         ##' @return Returns areference object of class 'number'
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x = number(as.matrix(c(1, 2, 3)))
         ##' y = number(as.matrix(c(4, 5, 6)))
         ##' z = x$bind(y, 2)
@@ -404,7 +404,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' g = graph.open()
         ##' x1 = number(1)
         ##' x2 = number(2)
@@ -427,7 +427,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' g = graph.open()
         ##' x1 = number(4)
         ##' x2 = number(2)
@@ -454,7 +454,7 @@
         ##' @return Returns invisible self
         ##' @examples
         ##' \donttest{
-        ##' modello.init()
+        ##' modello.init(10, 10, 10, 10)
         ##' x1 = number(4)
         ##' x2 = number(2)
         ##' g = graph.open()

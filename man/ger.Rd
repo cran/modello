@@ -24,7 +24,7 @@ ans = alpha * A.B**T + C
 where alpha is a scalar and A, B, are vectors and C is a matrix.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 alpha = number(1, scalar=TRUE)
 A = number(rnorm(3))
 B = number(rnorm(3))

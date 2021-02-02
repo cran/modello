@@ -28,7 +28,7 @@ Calculates the Softmax function
 \deqn{sofmax = \frac{exp(\bf x)}{\sum{exp(\bf x)}}}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_number matrices
 x = number(matrix(rnorm(9), 3, 3))
 y1 = softmax(x)

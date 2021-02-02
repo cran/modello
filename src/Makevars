@@ -2,3 +2,60 @@ USE_FC_TO_LINK =
 PKG_FFLAGS = $(SHLIB_OPENMP_FFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(SAFE_FFLAGS)
 PKG_LIBS = $(SHLIB_OPENMP_FFLAGS) $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(SAFE_FFLAGS)  
 
+modello.so: Rinterfaces.c \
+	env.o \
+	types.o \
+	registers.o \
+	utils.o \
+	errwarn.o \
+	Rfuns.o\
+	math.o \
+	operators.o \
+	node_operators.o \
+	numbers_utils.o \
+	nodes_utils.o\
+	nodes.o \
+	numbers.o \
+	numbers_modifiers.o \
+	numbers_math.o \
+	optim_utils.o \
+	sgd.o \
+	interfaces.o 
+
+Rfuns.o: Rfuns.c
+
+Rfuns.o: Rfuns.c
+
+env.o: env.f95		
+
+types.o: types.f95
+
+registers.o: registers.f95 types.o
+
+errwarn.o: errwarn.f95 env.o types.o registers.o Rfuns.o
+
+utils.o: utils.f95 errwarn.o
+
+math.o: math.f95 env.o errwarn.o Rfuns.o
+
+numbers_utils.o: numbers_utils.f95 env.o types.o registers.o errwarn.o utils.o
+
+nodes_utils.o: nodes_utils.f95 env.o types.o errwarn.o utils.o numbers_utils.o
+
+operators.o: operators.f95 env.o types.o errwarn.o math.o numbers_utils.o 
+
+node_operators.o: node_operators.f95 types.o registers.o operators.o
+
+nodes.o: nodes.f95 env.o types.o registers.o errwarn.o utils.o numbers_utils.o nodes_utils.o node_operators.o 
+
+numbers.o: numbers.f95 env.o types.o registers.o errwarn.o utils.o numbers_utils.o nodes.o
+
+numbers_modifiers.o: numbers_modifiers.f95 env.o errwarn.o nodes.o numbers.o
+
+numbers_math.o: numbers_math.f95 env.o types.o registers.o errwarn.o math.o nodes.o operators.o numbers_utils.o numbers.o 
+
+optim_utils.o: optim_utils.f95 env.o errwarn.o registers.o
+
+sgd.o: sgd.f95 env.o errwarn.o math.o nodes.o optim_utils.o
+
+interfaces.o: interfaces.f95 errwarn.o utils.o math.o nodes.o numbers.o numbers_modifiers.o numbers_math.o optim_utils.o sgd.o

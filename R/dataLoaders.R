@@ -96,7 +96,7 @@ DataSet.Array = R6Class(
         ##' @param x number
         ##' @param mode popping mode
         ##' @examples
-        ##' modello.init()
+        ##' modello.init(100, 100, 100, 100)
         ##' X = matrix(rnorm(100), 20)
         ##' ds = DataSet.Array$new(X, 1:20, 1, 1)
         ##' x = number(rnorm(5))
@@ -312,7 +312,7 @@ DataSet.Seq = R6Class(
         ##' @param x existing sequence, if NULL it creates a new one
         ##' @param mode chectacter indicating the way to build the sequences
         ##' @examples
-        ##' modello.init()
+        ##' modello.init(100, 100, 100, 100)
         ##' ds = DataSet.Seq$new(matrix(rnorm(100), 20), 5, 1)
         ##' SEQ = ds$feed(NULL)
         ##' print(names(SEQ))
@@ -468,7 +468,7 @@ DataLoader.Seq = R6Class(
         ##' @param SEQ batch of sequences. If NULL it creates a new one
         ##' @param mode feeding mode
         ##' @examples
-        ##' modello.init()
+        ##' modello.init(100, 100, 100, 100)
         ##' ds = DataSet.Seq$new(matrix(rnorm(100), 20), 5, 1)
         ##' dl = DataLoader.Seq$new(ds, 5)
         ##' SEQ = dl$feed(NULL)

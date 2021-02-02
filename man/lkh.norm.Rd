@@ -23,7 +23,7 @@ Calculates the weighted Normal Likelihood for independent variables
 \deqn{lkh = \sum_i{w_i * ldnorm(y_i, \mu_i, \sigma_i)}}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 y = number(rnorm(10), dx=FALSE)
 mu = number(rep(0, 10))
 s = number(rep(1, 10))

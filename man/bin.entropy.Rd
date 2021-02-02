@@ -25,7 +25,7 @@ Entropy for binary target variables (Negative Bernoulli Log-Likelihood)
 \deqn{h = \sum_i{-y_i * log(\hat y_i) - (1- y_i) * log(1 - \hat y_i)}}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(sample(c(1, 0), 10, replace=TRUE), dx=FALSE)
 yh = number(runif(10))

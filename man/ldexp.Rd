@@ -26,7 +26,7 @@ calculates the log-density
 \deqn{ld = log(\lambda) - \lambda * y; y \ge 0}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rexp(10))
 ld = ldexp(y, .k(1))

@@ -21,7 +21,7 @@ Considering a Multivariate Normal Distribution calculates the log-density
 \deqn{ld = -0.5 * (n * log(2 * \pi) * log(|\Sigma|) + y^T \Sigma y)}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 y = number(rnorm(10))
 mu = number(rep(0, 10))
 E = number(diag(1, 10))

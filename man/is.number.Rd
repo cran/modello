@@ -16,7 +16,7 @@ Returns TRUE/FALSE
 Checks if a object is of class 'number'
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 is.number(x) # TRUE
 modello.close()

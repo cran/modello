@@ -23,7 +23,7 @@ Calculates the Swish function
 \deqn{swish = x * sigmoid(x)}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers sclars
 x1 = number(rnorm(1), scalar=TRUE)
 y1 = swish(x1)

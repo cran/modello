@@ -48,7 +48,7 @@ dfun <- function (x, fn) {
 ##' @return Returns a referecen object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## Scalar + scalar
 ##' x1 = number(1, scalar=TRUE)
 ##' x2 = number(2, scalar=TRUE)
@@ -79,7 +79,7 @@ dfun <- function (x, fn) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## Scalar - scalar
 ##' x1 = number(2, scalar=TRUE)
 ##' x2 = number(1, scalar=TRUE)
@@ -110,7 +110,7 @@ dfun <- function (x, fn) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## Scalar * scalar
 ##' x1 = number(2, scalar=TRUE)
 ##' x2 = number(2, scalar=TRUE)
@@ -141,7 +141,7 @@ dfun <- function (x, fn) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## Scalar ** scalar
 ##' x1 = number(2, scalar=TRUE)
 ##' x2 = number(2, scalar=TRUE)
@@ -177,7 +177,7 @@ dfun <- function (x, fn) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## Scalar / scalar
 ##' x1 = number(1, scalar=TRUE)
 ##' x2 = number(2, scalar=TRUE)
@@ -202,7 +202,7 @@ dfun <- function (x, fn) {
 }
 ##' @rdname bin.entropy
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(sample(c(1, 0), 10, replace=TRUE), dx=FALSE)
 ##' yh = number(runif(10))
@@ -241,7 +241,7 @@ bin.entropy <- function (y, yh) {
 }
 ##' @rdname cross.entropy
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(matrix({x=sample(c(1, 0), 5, replace=TRUE); c(x, 1-x)}, 5, 2), dx=FALSE)
 ##' yh = number(t(apply(matrix(runif(10), 5, 2), 1, function(x)x/sum(x))))
@@ -278,7 +278,7 @@ cross.entropy <- function (y, yh) {
 }
 ##' @rdname mse
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rnorm(10), dx=FALSE)
 ##' yh = number(rnorm(10))
@@ -316,7 +316,7 @@ mse <- function (y, yh) {
 }
 ##' @rdname mae
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rnorm(10), dx=FALSE)
 ##' yh = number(rnorm(10), dx=FALSE)
@@ -359,7 +359,7 @@ mae <- function (y, yh) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(-3, scalar=TRUE)
 ##' y1 = abs(x1)
@@ -382,7 +382,7 @@ abs.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(-3, scalar=TRUE)
 ##' y1 = exp(x1)
@@ -406,7 +406,7 @@ exp.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(3, scalar=TRUE)
 ##' y1 = log(x1)
@@ -429,7 +429,7 @@ log.modello_number <- function (x, base=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = sin(x1)
@@ -452,7 +452,7 @@ sin.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = cos(x1)
@@ -475,7 +475,7 @@ cos.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = tan(x1)
@@ -498,7 +498,7 @@ tan.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = sinh(x1)
@@ -521,7 +521,7 @@ sinh.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = cosh(x1)
@@ -544,7 +544,7 @@ cosh.modello_number <- function (x) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For sclars
 ##' x1 = number(pi, scalar=TRUE)
 ##' y1 = tanh(x1)
@@ -562,7 +562,7 @@ tanh.modello_number <- function (x) {
 }
 ##' @rdname sigmoid
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers sclars
 ##' x1 = number(rnorm(1), scalar=TRUE)
 ##' y1 = sigmoid(x1)
@@ -605,7 +605,7 @@ sigmoid <- function (x) {
 }
 ##' @rdname relu
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers sclars
 ##' x1 = number(rnorm(1), scalar=TRUE)
 ##' y1 = relu(x1)
@@ -649,7 +649,7 @@ relu <- function (x) {
 }
 ##' @rdname swish
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers sclars
 ##' x1 = number(rnorm(1), scalar=TRUE)
 ##' y1 = swish(x1)
@@ -692,7 +692,7 @@ swish <- function(x) {
 }
 ##' @rdname softmax
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_number matrices
 ##' x = number(matrix(rnorm(9), 3, 3))
 ##' y1 = softmax(x)
@@ -758,7 +758,7 @@ softmax <- function (x, k) {
 }
 ##' @rdname invMat
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_number matrices
 ##' x = number(diag(0.1, 3))
 ##' ix = invMat(x)
@@ -799,7 +799,7 @@ invMat <- function (A) {
 ##' @return Returns a 'numeric' or reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' x = number(rep(1, 20))
 ##' y = sum(x)
 ##' print(y)
@@ -811,7 +811,7 @@ sum.modello_number <- function (x, k=0, ...) {
 }
 ##' @rdname ssq
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' x = number(rnorm(10))
 ##' y = ssq(x)
@@ -845,7 +845,7 @@ ssq <- function (x) {
 }
 ##' @rdname ldexp
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rexp(10))
 ##' ld = ldexp(y, .k(1))
@@ -882,7 +882,7 @@ ldexp <- function (y, lam) {
 }
 ##' @rdname ldlaplace
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' y = number(rnorm(10))
 ##' ld = ldlaplace(y, .k(0), .k(1))
 ##' print(ld)
@@ -909,7 +909,7 @@ ldlaplace <- function (y, mu, lam) {
 }
 ##' @rdname ldbeta
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rbeta(10, 1, 2))
 ##' ld = ldbeta(y, .k(1), .k(2))
@@ -946,7 +946,7 @@ ldbeta <- function (y, a1, a2) {
 }
 ##' @rdname ldgamma
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rgamma(10, 5, 4))
 ##' ld = ldgamma(y, .k(5), .k(4))
@@ -983,7 +983,7 @@ ldgamma <- function (y, a, b) {
 }
 ##' @rdname ldnorm
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' ## For modello_numbers
 ##' y = number(rnorm(10))
 ##' ld = ldnorm(y, .k(0), .k(1))
@@ -1028,7 +1028,7 @@ ldnorm <- function (y, mu, s) {
 ##' @return Returns a 'numeric' or a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' y = number(rnorm(10))
 ##' mu = number(rep(0, 10))
 ##' E = number(diag(1, 10))
@@ -1052,7 +1052,7 @@ ldmvnorm <- function (y, mu, E) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' y = number(rnorm(10), dx=FALSE)
 ##' mu = number(rep(0, 10))
 ##' s = number(rep(1, 10))
@@ -1082,7 +1082,7 @@ lkh.norm <- function (y, mu, s, w=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' alpha = number(1, scalar=TRUE)
 ##' beta = number(1, scalar=TRUE)
 ##' A = number(matrix(rnorm(9), 3, 3))
@@ -1131,7 +1131,7 @@ gemm <- function (ta, tb, alpha=NULL, A, B, beta=NULL, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' alpha = number(1, scalar=TRUE)
 ##' beta = number(1, scalar=TRUE)
 ##' A = number(matrix(rnorm(9), 3, 3))
@@ -1178,7 +1178,7 @@ gemv <-  function (ta,  alpha=NULL, A, B, beta=NULL, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' alpha = number(1, scalar=TRUE)
 ##' A = number(rnorm(3))
 ##' B = number(rnorm(3))
@@ -1216,7 +1216,7 @@ ger <- function (alpha=NULL, A, B, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' A = number(matrix(rnorm(9), 3, 3))
 ##' B = number(matrix(rnorm(9), 3, 3))
 ##' b = number(rnorm(3))
@@ -1245,7 +1245,7 @@ ger <- function (alpha=NULL, A, B, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' A = number(matrix(rnorm(9), 3, 3))
 ##' B = number(matrix(rnorm(9), 3, 3))
 ##' b = number(rnorm(3))
@@ -1278,7 +1278,7 @@ ger <- function (alpha=NULL, A, B, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' A = number(matrix(rnorm(9), 3, 3))
 ##' B = number(matrix(rnorm(9), 3, 3))
 ##' b = number(matrix(rnorm(3), 1, 3))
@@ -1307,7 +1307,7 @@ ger <- function (alpha=NULL, A, B, C=NULL) {
 ##' @return Returns a reference object of class 'number'
 ##' @author Filippo Monari
 ##' @examples
-##' modello.init()
+##' modello.init(10, 10, 10, 10)
 ##' A = number(matrix(rnorm(9), 3, 3))
 ##' B = number(matrix(rnorm(9), 3, 3))
 ##' ans = A %T.T% B
@@ -1318,37 +1318,3 @@ ger <- function (alpha=NULL, A, B, C=NULL) {
 `%T.T%` <- function (A, B) {
     .modello$apply.math_op(.intrf.number__dgemm2, 1, 1, A$id(), B$id())#gemm(ta=1, tb=1, A=A, B=B)
 }
-## ##' @rdname ksqexp
-## ##' @export
-## ksqexp.modello_number <- function (x1, x2, a, b) {
-##     .modello$apply.math_op(.intrf.number__ksqexp, x1, x2, a, b)
-## }
-## ##' @rdname ksqexp
-## ##' @export
-## ksqexp.numeric <- function (x1, x2, a, b) {
-##     base::prod(a * base::exp(-(x1 - x2)**2 * b))
-## }
-## ##' @rdname ksqexp
-## ##' @export
-## ksqexp.matrix <- function (x1, x2, a, b) {
-##     ans = matrix(0, nrow(x1), nrow(x2))
-##     for (i in 1:nrow(x1)) {
-##         for (j in 1:nrow(x2)) {
-##             ans[i,j] = ksqexp(x1[i,], x2[j,], a, b)
-##         }
-##     }
-##     return(ans)
-## }
-## ##' Calculates the squared exponential kernel for two fearture
-## ##' vectors or matrices.
-## ##'
-## ##' @title Squared Exponential Kernel
-## ##' @param x1 numeric or reference object of class number
-## ##' @param x2 numeric or reference object of class number
-## ##' @param a numeric or reference object of class number
-## ##' @param b numeric or reference object of class number
-## ##' @return Rerturns a 'numeric' or a referecen objcet of class 'number'
-## ##' @author Filippo Monari
-## ksqexp <- function (x1, x2, a, b) {
-##     UseMethod('ksqexp', x1)
-## }

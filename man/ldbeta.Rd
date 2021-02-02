@@ -27,7 +27,7 @@ Considering a Beta Distribution calculates the log-density
 \deqn{ld = (\alpha_1 - 1) * log(y) + (\alpha_2 - 1) * log(1 - y) - logBeta(\alpha_1, \alpha_2); y \in (0, 1)}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rbeta(10, 1, 2))
 ld = ldbeta(y, .k(1), .k(2))

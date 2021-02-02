@@ -19,7 +19,7 @@
 Sets the value of a slice in a \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 x[1,1] = -100

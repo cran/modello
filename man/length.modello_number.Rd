@@ -16,7 +16,7 @@ Returns the size of the \code{number}
 S3 method to get the total size of a \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(rnorm(3))
 length(x) #3
 modello.close()

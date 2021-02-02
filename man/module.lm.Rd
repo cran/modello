@@ -15,7 +15,7 @@ R6 class representing a linear model.
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 X = number(as.matrix(rnorm(10)), dx=FALSE)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
 print(X$v)
@@ -30,7 +30,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 X = number(as.matrix(rnorm(10)), dx=FALSE)
 y = number(as.matrix(rnorm(10)), dx=FALSE)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
@@ -48,7 +48,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
 print(mdl$pars())
 print(lapply(mdl$pars(), function(x)x$v))
@@ -136,7 +136,7 @@ Returns a reference object of class 'number'
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 X = number(as.matrix(rnorm(10)), dx=FALSE)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
 print(X$v)
@@ -175,7 +175,7 @@ Returns a reference object of class 'number'
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 X = number(as.matrix(rnorm(10)), dx=FALSE)
 y = number(as.matrix(rnorm(10)), dx=FALSE)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
@@ -209,7 +209,7 @@ Returns a flat list with the parametrs of the module
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 mdl = module.lm$new(1, 1, 1, b=FALSE)
 print(mdl$pars())
 print(lapply(mdl$pars(), function(x)x$v))

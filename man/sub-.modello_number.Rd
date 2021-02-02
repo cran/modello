@@ -20,7 +20,7 @@ Returns a reference object of class 'number'
 Slices \code{numbers}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 s1 = x[1, 2]

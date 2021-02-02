@@ -25,7 +25,7 @@ Calculates the mean absolute error between target values and predictions
 \deqn{mae = \sum_i^N{|y_i - \hat y_i|} / N}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(rnorm(10), dx=FALSE)
 yh = number(rnorm(10), dx=FALSE)

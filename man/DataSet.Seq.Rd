@@ -24,7 +24,7 @@ ds$length() # 20
 ## Method `DataSet.Seq$feed`
 ## ------------------------------------------------
 
-modello.init()
+modello.init(100, 100, 100, 100)
 ds = DataSet.Seq$new(matrix(rnorm(100), 20), 5, 1)
 SEQ = ds$feed(NULL)
 print(names(SEQ))
@@ -136,7 +136,7 @@ Feeds the data into an existing seqience or creating a new one
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
-\preformatted{modello.init()
+\preformatted{modello.init(100, 100, 100, 100)
 ds = DataSet.Seq$new(matrix(rnorm(100), 20), 5, 1)
 SEQ = ds$feed(NULL)
 print(names(SEQ))

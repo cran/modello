@@ -17,7 +17,7 @@ a reference object of class 'sgd.opt'
 Creates an stochastic gradient descent optimiser.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 mdl = module.lm$new(1, 3, 1)
 optimizer = sgd.opt(mdl$pars())
 is.opt(optimizer) # TRUE

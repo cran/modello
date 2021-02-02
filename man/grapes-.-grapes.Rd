@@ -20,7 +20,7 @@ ans = A.B
 where A and B are matrices
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 A = number(matrix(rnorm(9), 3, 3))
 B = number(matrix(rnorm(9), 3, 3))
 b = number(rnorm(3))

@@ -25,7 +25,7 @@ Cross-entropy (Negaitve Multinomial log-likelihood)
 \deqn{\sum_i{y_i * log(\hat y_i)}}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_numbers
 y = number(matrix({x=sample(c(1, 0), 5, replace=TRUE); c(x, 1-x)}, 5, 2), dx=FALSE)
 yh = number(t(apply(matrix(runif(10), 5, 2), 1, function(x)x/sum(x))))

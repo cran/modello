@@ -18,7 +18,7 @@ Returns a reference object of class 'number'
 Calculates the logarithm of a \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For sclars
 x1 = number(3, scalar=TRUE)
 y1 = log(x1)

@@ -27,7 +27,7 @@ S3 method to bind \code{numbers} together
 along a certain dimension.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(c(1, 2, 3))
 y1 = bind(x1, x1, k=1)
 print(y1)
@@ -37,7 +37,7 @@ y2 = bind(x2, x2, k=2)
 print(y2)
 print(y2$v)
 modello.close()
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(c(1, 2, 3))
 y1 = bind(list(x1, x1), k=1)
 print(y1)

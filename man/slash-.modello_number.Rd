@@ -18,7 +18,7 @@ Returns a reference object of class 'number'
 Divides a number by another.
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## Scalar / scalar
 x1 = number(1, scalar=TRUE)
 x2 = number(2, scalar=TRUE)

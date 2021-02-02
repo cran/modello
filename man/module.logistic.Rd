@@ -8,6 +8,23 @@ R6 class representing a logistic regression model.
 
 R6 class representing a logistic regression model.
 }
+\examples{
+
+## ------------------------------------------------
+## Method `module.logistic$op`
+## ------------------------------------------------
+
+\donttest{
+modello.init(10, 10, 10, 10)
+X = number(as.matrix(rnorm(10)), dx=FALSE)
+mdl = module.logistic$new(1, 1, b=FALSE)
+print(X$v)
+Yh = mdl$op(X)
+print(Yh)
+print(Yh$v)
+modello.close()
+}
+}
 \author{
 Filippo Monari
 }
@@ -44,7 +61,7 @@ the objective function (obj), as well as the name of the module.
 The calculation performed is the following
 ans = sigmoid(W.op(X) + B)
 \subsection{Usage}{
-\if{html}{\out{<div class="r">}}\preformatted{module.logistic$new(tx, nin, name)}\if{html}{\out{</div>}}
+\if{html}{\out{<div class="r">}}\preformatted{module.logistic$new(tx, nin, b = TRUE)}\if{html}{\out{</div>}}
 }
 
 \subsection{Arguments}{
@@ -54,7 +71,7 @@ ans = sigmoid(W.op(X) + B)
 
 \item{\code{nin}}{number of column of the input matrix}
 
-\item{\code{name}}{name of the layer}
+\item{\code{b}}{if TRUE the intercept term is included}
 }
 \if{html}{\out{</div>}}
 }
@@ -81,6 +98,23 @@ Performs: ans = sigmoid(W.op(X) + B)
 \subsection{Returns}{
 Returns a reference object of class 'number'
 }
+\subsection{Examples}{
+\if{html}{\out{<div class="r example copy">}}
+\preformatted{\donttest{
+modello.init(10, 10, 10, 10)
+X = number(as.matrix(rnorm(10)), dx=FALSE)
+mdl = module.logistic$new(1, 1, b=FALSE)
+print(X$v)
+Yh = mdl$op(X)
+print(Yh)
+print(Yh$v)
+modello.close()
+}
+}
+\if{html}{\out{</div>}}
+
+}
+
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}

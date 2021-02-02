@@ -16,7 +16,7 @@ Returns TRUE/FALSE
 Checks if an object os of class 'graph'
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 is.graph(g) # TRUE
 modello.close()

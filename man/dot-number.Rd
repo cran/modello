@@ -22,7 +22,7 @@ session object that linkes them with the corresponding
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$is.linked() # TRUE
 x$pop()
@@ -35,7 +35,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$is.linked() # TRUE
 x$pop()
@@ -48,7 +48,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 x$rank() # 2
 modello.close()
@@ -59,7 +59,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x1$has.dx() # TRUE
 x2 = number(1, dx=FALSE)
@@ -72,7 +72,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(c(1, 2, 3))
 x$length() # 3
 modello.close()
@@ -83,7 +83,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9, 3, 3)))
 x$dim() # c(3, 3)
 modello.close()
@@ -93,7 +93,7 @@ modello.close()
 ## Method `.number$set.v`
 ## ------------------------------------------------
 
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.v(2)
 x$get.v()
@@ -104,7 +104,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.v(2)
 x$get.v()
@@ -116,7 +116,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.dv(1)
 x$get.dv()
@@ -128,7 +128,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(0, 3, 3))
 print(x$v)
 print(x$dv)
@@ -144,7 +144,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(0, 3, 3))
 print(x$v)
 print(x$dv)
@@ -160,7 +160,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.dv(1)
 x$get.dv()
@@ -172,7 +172,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$slice(1:2, 1:3)
@@ -185,7 +185,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$flat_slice(1:6)
@@ -198,7 +198,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$slice(1, 2)
@@ -211,7 +211,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(c(1, 2, 3, 4, 5, 6))
 y = x$reshape(c(3, 2))
 print(x)
@@ -226,7 +226,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(as.matrix(c(1, 2, 3)))
 print(x)
 print(x$v)
@@ -241,7 +241,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(as.matrix(c(1, 2, 3)))
 y = number(as.matrix(c(4, 5, 6)))
 z = x$bind(y, 2)
@@ -255,7 +255,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 x1 = number(1)
 x2 = number(2)
@@ -273,7 +273,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 x1 = number(4)
 x2 = number(2)
@@ -296,7 +296,7 @@ modello.close()
 ## ------------------------------------------------
 
 \donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(4)
 x2 = number(2)
 g = graph.open()
@@ -433,7 +433,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$is.linked() # TRUE
 x$pop()
@@ -462,7 +462,7 @@ Retursn TRUE if is linked, FALSE otherwise
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$is.linked() # TRUE
 x$pop()
@@ -490,7 +490,7 @@ Returns the rank of the \code{number}
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 x$rank() # 2
 modello.close()
@@ -517,7 +517,7 @@ TRUE/FALSE
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(1)
 x1$has.dx() # TRUE
 x2 = number(1, dx=FALSE)
@@ -574,7 +574,7 @@ Returns the size of the \code{number}
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(c(1, 2, 3))
 x$length() # 3
 modello.close()
@@ -600,7 +600,7 @@ Returns the \code{number} shape
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9, 3, 3)))
 x$dim() # c(3, 3)
 modello.close()
@@ -632,7 +632,7 @@ Returns invisible self
 }
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
-\preformatted{modello.init()
+\preformatted{modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.v(2)
 x$get.v()
@@ -658,7 +658,7 @@ Returns the \code{number} value
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.v(2)
 x$get.v()
@@ -692,7 +692,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.dv(1)
 x$get.dv()
@@ -730,7 +730,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(0, 3, 3))
 print(x$v)
 print(x$dv)
@@ -773,7 +773,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(0, 3, 3))
 print(x$v)
 print(x$dv)
@@ -804,7 +804,7 @@ Returns the \code{number} value
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(1)
 x$set.dv(1)
 x$get.dv()
@@ -840,7 +840,7 @@ Returns a reference object of class 'number' with the slice
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$slice(1:2, 1:3)
@@ -877,7 +877,7 @@ Returns a reference object of class 'number' with the flat slice
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$flat_slice(1:6)
@@ -919,7 +919,7 @@ Returns a reference object of class 'number' with the contiguous slice
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(matrix(rnorm(9), 3, 3))
 print(x$v)
 y = x$slice(1, 2)
@@ -958,7 +958,7 @@ Returns a reference object of class 'number' with the reshape
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(c(1, 2, 3, 4, 5, 6))
 y = x$reshape(c(3, 2))
 print(x)
@@ -994,7 +994,7 @@ The \code{number} is not copied but reshaped through pointers.
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(as.matrix(c(1, 2, 3)))
 print(x)
 print(x$v)
@@ -1035,7 +1035,7 @@ Returns areference object of class 'number'
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x = number(as.matrix(c(1, 2, 3)))
 y = number(as.matrix(c(4, 5, 6)))
 z = x$bind(y, 2)
@@ -1064,7 +1064,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 x1 = number(1)
 x2 = number(2)
@@ -1098,7 +1098,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 g = graph.open()
 x1 = number(4)
 x2 = number(2)
@@ -1136,7 +1136,7 @@ Returns invisible self
 \subsection{Examples}{
 \if{html}{\out{<div class="r example copy">}}
 \preformatted{\donttest{
-modello.init()
+modello.init(10, 10, 10, 10)
 x1 = number(4)
 x2 = number(2)
 g = graph.open()

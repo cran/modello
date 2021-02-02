@@ -22,7 +22,7 @@ Returns a 'numeric' or reference object of class 'number'
 Calculates the inverse matrix
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For modello_number matrices
 x = number(diag(0.1, 3))
 ix = invMat(x)

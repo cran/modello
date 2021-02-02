@@ -16,7 +16,7 @@ Returns a reference object of class 'number'
 Calculates the hyperbolic tangent of a \code{number}
 }
 \examples{
-modello.init()
+modello.init(10, 10, 10, 10)
 ## For sclars
 x1 = number(pi, scalar=TRUE)
 y1 = tanh(x1)
